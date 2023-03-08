@@ -1,0 +1,288 @@
+
+*** Running vivado
+    with args -log traffic_system_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source traffic_system_tb.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source traffic_system_tb.tcl -notrace
+Command: synth_design -top traffic_system_tb -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 308 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 410.254 ; gain = 98.086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'traffic_system_tb' [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/traffic_system_tb.v:3]
+INFO: [Synth 8-6157] synthesizing module 'traffic_system' [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/Traffic_System.v:3]
+	Parameter red bound to: 3'b001 
+	Parameter yellow bound to: 3'b010 
+	Parameter green bound to: 3'b100 
+	Parameter sec30 bound to: 30 - type: integer 
+	Parameter sec10 bound to: 10 - type: integer 
+	Parameter sec5 bound to: 5 - type: integer 
+	Parameter s0 bound to: 0 - type: integer 
+	Parameter s1 bound to: 1 - type: integer 
+	Parameter s2 bound to: 2 - type: integer 
+	Parameter s3 bound to: 3 - type: integer 
+	Parameter s4 bound to: 4 - type: integer 
+	Parameter s5 bound to: 5 - type: integer 
+	Parameter s6 bound to: 6 - type: integer 
+	Parameter s7 bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/Traffic_System.v:22]
+INFO: [Synth 8-226] default block is never used [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/Traffic_System.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'traffic_system' (1#1) [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/Traffic_System.v:3]
+WARNING: [Synth 8-85] always block has no event control specified [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/traffic_system_tb.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'traffic_system_tb' (2#1) [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/traffic_system_tb.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 464.824 ; gain = 152.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 464.824 ; gain = 152.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 464.824 ; gain = 152.656
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-4471] merging register 'police_reg' into 'ambulance_reg' [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/Traffic_System.v:83]
+WARNING: [Synth 8-6014] Unused sequential element police_reg was removed.  [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/Traffic_System.v:83]
+INFO: [Synth 8-802] inferred FSM for state register 'ps_reg' in module 'traffic_system'
+INFO: [Synth 8-5544] ROM "WE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "SN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "EW" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ps" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ps" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ps" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ps" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ps" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ps" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                              000 |                              000
+                      s1 |                              001 |                              001
+                      s2 |                              010 |                              010
+                      s3 |                              011 |                              011
+                      s4 |                              100 |                              100
+                      s5 |                              101 |                              101
+                      s6 |                              110 |                              110
+                      s7 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ps_reg' using encoding 'sequential' in module 'traffic_system'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 464.824 ; gain = 152.656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 7     
+	   8 Input      5 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module traffic_system 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 7     
+	   8 Input      5 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element DUT/ambulance_reg was removed.  [D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.srcs/sources_1/new/Traffic_System.v:83]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     2|
+|3     |LUT3 |     1|
+|4     |LUT4 |     4|
+|5     |LUT5 |    10|
+|6     |LUT6 |     7|
+|7     |FDRE |     8|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+---------------+------+
+|      |Instance |Module         |Cells |
++------+---------+---------------+------+
+|1     |top      |               |    33|
+|2     |  DUT    |traffic_system |    32|
++------+---------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 772.305 ; gain = 460.137
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 888.738 ; gain = 589.441
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/vivado projects/SMART_Traffic_Light_Controller_2/SMART_Traffic_Light_Controller_2.runs/synth_1/traffic_system_tb.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file traffic_system_tb_utilization_synth.rpt -pb traffic_system_tb_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.747 . Memory (MB): peak = 888.738 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 11 09:30:48 2023...
